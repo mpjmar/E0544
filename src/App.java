@@ -60,7 +60,8 @@ public class App {
 					System.out.print("Introduzca la posición donde quiere insertar: ");
 					pos = Integer.parseInt(System.console().readLine());
 					len = longitud(num);
-					if (pos > len + 1) System.out.println("La posición no puede ser superior a la longitud del número + 1.");
+					correcto = pos < len + 1;
+					if (!correcto) System.out.println("La posición no puede ser superior a la longitud del número + 1.");
 				} while (!correcto);
 				do {
 					System.out.print("Introduzca el dígito que quiere insertar (0-9): ");
